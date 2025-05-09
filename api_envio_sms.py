@@ -6,8 +6,8 @@ auth_token = os.getenv('auth')
 
 client = Client(account_sid, auth_token)
 
-remetente = '+19785747363'
-destino = '+5511915611207'
+remetente = os.getenv('remetente')
+destino = os.getenv('destino')
 
 message = client.messages.create(
     to = destino,
